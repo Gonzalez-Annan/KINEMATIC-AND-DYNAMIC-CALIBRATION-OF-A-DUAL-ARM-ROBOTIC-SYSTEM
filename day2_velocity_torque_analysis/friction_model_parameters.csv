@@ -1,0 +1,12 @@
+parameter,value,unit
+Coulomb friction tau_c,0.020526956612336843,Nm
+Static/Stribeck torque tau_s,0.019037910538863823,Nm
+Stribeck characteristic velocity w_s,0.11691487974660977,rad/s
+Viscous coefficient b,0.0031440824537733118,Nm/(rad/s)
+Torque offset,-7.217764931309464e-06,Nm
+Stribeck exponent n,4.999999999999788,-
+Stribeck model R2,0.9998762765913078,-
+Coulomb+viscous tau_c,0.019903259980222833,Nm
+Coulomb+viscous b,0.0027733865455015095,Nm/(rad/s)
+Coulomb+viscous offset,-0.0002867288726255641,Nm
+Coulomb+viscous R2,0.9989362521104782,-

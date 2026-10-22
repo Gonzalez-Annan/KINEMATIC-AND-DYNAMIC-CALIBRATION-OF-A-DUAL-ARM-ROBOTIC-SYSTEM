@@ -1,0 +1,9 @@
+build/
+install/
+log/
+logs/
+src/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.pdf
