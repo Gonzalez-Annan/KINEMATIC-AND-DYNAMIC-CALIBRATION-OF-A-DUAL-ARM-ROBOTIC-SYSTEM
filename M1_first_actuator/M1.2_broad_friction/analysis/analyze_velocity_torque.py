@@ -17,11 +17,11 @@ except ImportError:
 # ============================================================
 
 DATA_DIR = Path(
-    "/home/uexpj/ros2_ws/day2_velocity_torque_data"
+    Path(__file__).resolve().parents[1] / "data" / "raw"
 )
 
 OUTPUT_DIR = Path(
-    "/home/uexpj/ros2_ws/day2_velocity_torque_analysis"
+    Path(__file__).resolve().parents[1] / "data" / "processed"
 )
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -45,6 +45,9 @@ LOW_SPEED_LIMIT = 0.5
 # ============================================================
 # LOAD
 # ============================================================
+
+FIG_DIR = Path(__file__).resolve().parents[1] / "figures"
+FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(CSV_PATH)
 
@@ -739,7 +742,7 @@ plt.legend()
 plt.tight_layout()
 
 plt.savefig(
-    OUTPUT_DIR / "01_velocity_vs_time.png",
+    FIG_DIR / "01_velocity_vs_time.png",
     dpi=200,
 )
 
@@ -765,7 +768,7 @@ plt.grid(True)
 plt.tight_layout()
 
 plt.savefig(
-    OUTPUT_DIR / "02_torque_vs_time.png",
+    FIG_DIR / "02_torque_vs_time.png",
     dpi=200,
 )
 
@@ -873,7 +876,7 @@ plt.legend()
 plt.tight_layout()
 
 plt.savefig(
-    OUTPUT_DIR / "04_torque_vs_velocity_full.png",
+    FIG_DIR / "04_torque_vs_velocity_full.png",
     dpi=200,
 )
 
@@ -911,7 +914,7 @@ plt.legend()
 plt.tight_layout()
 
 plt.savefig(
-    OUTPUT_DIR / "05_sweep_repeatability.png",
+    FIG_DIR / "05_sweep_repeatability.png",
     dpi=200,
 )
 
@@ -955,7 +958,7 @@ plt.grid(True)
 plt.tight_layout()
 
 plt.savefig(
-    OUTPUT_DIR / "06_torque_distribution.png",
+    FIG_DIR / "06_torque_distribution.png",
     dpi=200,
 )
 
@@ -1100,7 +1103,7 @@ if stribeck_success:
     plt.tight_layout()
 
     plt.savefig(
-        OUTPUT_DIR / "09_stribeck_fit.png",
+        FIG_DIR / "09_stribeck_fit.png",
         dpi=250,
     )
 

@@ -77,7 +77,7 @@ COMMAND_TOPIC = "/forward_velocity_controller/commands"
 JOINT_STATE_TOPIC = "/joint_states"
 
 OUTPUT_DIR = Path(
-    "/home/uexpj/ros2_ws/day2_velocity_torque_data"
+    Path(__file__).resolve().parents[1] / "data" / "raw"
 )
 
 

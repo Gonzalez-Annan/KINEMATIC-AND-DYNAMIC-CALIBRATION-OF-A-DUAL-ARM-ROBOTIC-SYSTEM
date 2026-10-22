@@ -17,7 +17,7 @@ from std_msgs.msg import Float64MultiArray
 # ============================================================
 
 OUTPUT_DIR = Path(
-    "/home/uexpj/ros2_ws/day3_hysteresis_data"
+    Path(__file__).resolve().parents[1] / "data" / "raw"
 )
 
 COMMAND_TOPIC = (
